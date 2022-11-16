@@ -69,8 +69,8 @@ CIRCUIT DIAGRAM
 **PROGRAM** 
  
 ```
-Name : MEENA .S
-Register Number : 212221240028
+Name : SITHI HAJARA I
+Register Number : 212221230102
 
 void setup()
 
