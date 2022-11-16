@@ -69,39 +69,66 @@ CIRCUIT DIAGRAM
 **PROGRAM** 
  
 ```
-// C++ code
-//
-int sensorvalue = A0;
-int LED=7;
+Name : MEENA .S
+Register Number : 212221240028
+
 void setup()
+
 {
-  sensorvalue=0;
-  Serial.begin(9600);
-  //pinMode(LED_BUILTIN, OUTPUT);
-  pinMode(7,OUTPUT);
+
+pinMode(A0, INPUT);
+
+pinMode(7, OUTPUT);
+
+pinMode(8, OUTPUT);
+
+Serial.begin(9600);
+
 }
+
 void loop()
+
 {
-  sensorvalue = analogRead(A0);
-  //Serial.print("POT = ");
- 
-  Serial.println(sensorvalue);
-  delay(5);
-  digitalWrite(LED,sensorvalue);
-  delay(50);
- 
+
+int Sensorvalue = analogRead(A0);
+
+//Serial.print("Sensor Value = ");
+
+Serial.println(Sensorvalue);
+
+//delay(500);
+
+if(Sensorvalue<=30)
+
+{
+
+digitalWrite(8, HIGH);
+
+digitalWrite(7, LOW);
+
 }
+
+else if(Sensorvalue>=500)
+
+{
+
+digitalWrite(8,LOW);
+
+digitalWrite(7,HIGH);
+
+}
+
+}
+
 ```
 
 
 
 ## Simulation output:
-
-![ar](https://user-images.githubusercontent.com/94219582/189495387-de68465d-1400-4e80-a759-67db4f34c5d3.png)
-
+![189493814-85771a77-2ae3-4226-bde9-7dd1f789e5e0](https://user-images.githubusercontent.com/94219582/202177564-dc7aeeb1-08e1-452b-9c47-bd165c51dfef.png)
 
 
-
+![189493231-1526ed39-b32d-414c-ae53-06a96a31ea68](https://user-images.githubusercontent.com/94219582/202177596-5c3155c2-abd3-47e7-8a82-9fefa49cc121.png)
 
 ## RESULT: 
 Arduino uno analog input functioning is learned and interfaced with digital input switch .
